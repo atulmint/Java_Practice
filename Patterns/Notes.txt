@@ -1,0 +1,9 @@
+Patterns :--> Patterns are nothing they are combination or nested loops.
+
+1) For the Outer loops, Count the number of lines
+
+2) For the inner loops, Focus on the columns and Connect them somehow to the Rows.
+
+3) Print them '*' inside the inner for loop.
+
+4) Observe Symmetry [Optional].
