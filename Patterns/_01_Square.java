@@ -1,3 +1,16 @@
+/*
+so this is the pattern we have to print
+
+ *****
+ *****
+ *****
+ *****
+
+ The logic is very simple we have to run two loops one for rows and one for columns and print star in each column of every row and
+then we will move to next line after every row is printed. and we will repeat this for n number of rows.
+ 
+*/
+
 package Patterns;
 
 import java.util.*;
