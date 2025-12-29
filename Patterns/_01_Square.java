@@ -21,9 +21,9 @@ public class _01_Square {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
        
-        score1(n);
+             score1(n);
               score2(n);
-            //score3(n);
+            score3(n);
      
             // score4(n);
 
