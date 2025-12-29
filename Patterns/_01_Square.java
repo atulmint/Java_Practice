@@ -27,7 +27,7 @@ public class _01_Square {
      
             score4(n);
 
-            // score5(n);
+             score5(n);
 
             // score6(n);
 
