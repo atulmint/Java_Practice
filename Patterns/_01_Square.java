@@ -22,7 +22,7 @@ public class _01_Square {
         int n = sc.nextInt();
        
         score1(n);
-            //   score2(n);
+              score2(n);
             //score3(n);
      
             // score4(n);
