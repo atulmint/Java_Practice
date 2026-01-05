@@ -1,6 +1,6 @@
 //An Armstrong number (or narcissistic number) is a number that equals the sum of its own digits,
 //  each raised to the power of the total number of digits in the number, 
-// like 153 (\(1^{3}+5^{3}+3^{3}=1+125+27=153\)) or
+// like 153 (\(1^{3}+5^{3}+3^{3}=1+125+27=153\)) 
 //  1634 (\(1^{4}+6^{4}+3^{4}+4^{4}=1+1296+81+256=1634\)). 
 // They are a fun concept in number theory and common examples 
 // in programming for beginners to practice loops and powers. 
