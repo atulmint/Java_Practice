@@ -1,3 +1,5 @@
+26. Remove Duplicates from Sorted Array
+
 arr[]=[1,2,4,7,7,5,3]
 
 OPTIMAL : 
