@@ -237,4 +237,39 @@ OPTIMAL : SIMPLE HAI DHEKH REVERSE FUNCTION BANA AND PHELE [NUMS,0,N-1] TAKK REV
                 reverse(nums,0,n-1);
                 reverse(nums,0,k-1);
                 reverse(nums,k,n-1);
-            }
+
+
+        >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+Note that you must do this in-place without making a copy of the array.
+
+Example 1:
+
+Input: nums = [0,1,0,3,12]
+Output: [1,3,12,0,0]
+
+OPTIMAL : SIMPLE APPROCH HAI TWO POINTER USE KAREGE J= -1 SE AND I KO FULL ITERATE KARWAYEGE AND JAHA I ==0 HOGA WAHA PE J=I KAR DENGE 
+          MATLB J KO -1 SE AAGE BHADHA DENGE AND BREAK KAR JAYEGE NEXT LOOP ME I=J+1 SE SURU KAREGE AND CHECK KAREGE KI ARR[I]!=0 KE
+          AGAR HA TOH SWAP KAR DENGE  AUR J++.
+
+          Int j=-1;
+          int n =nums.length;
+
+          for(int i=0; i<n ; i++){
+           if(arr[i]=0)
+           j=i;
+           break;
+          }
+
+          for(int i= j+1; i<n; i++){
+          if(arr[i]!=0){
+          int temp = arr[i];
+          arr[i]=arr[j];
+          arr[j]=temp;
+          j++
+          }
+          }
+
+          T.C= O(n)         
