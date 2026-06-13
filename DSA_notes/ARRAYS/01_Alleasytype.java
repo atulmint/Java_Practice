@@ -78,7 +78,7 @@ largest = arr[i];
 }     
 secondLargest = Integer.MIN_VALUE;
 for(int i=0; i<arr.length; i++){
-    if(arr[i] > secondLargest && arr[i] != largest){
+    if(arr[i] > secondLargest && arr[i] != largest){ // Are you greater than second largest (Yes) and Are you not equal to largest (Yes) then second largest is arr[i]
         secondLargest = arr[i];
     }
 }
