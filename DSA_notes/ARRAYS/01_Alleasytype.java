@@ -90,7 +90,7 @@ TIME COMPLEXITY : O(N) + O(N) = O(2N)
 
 
 OPTIMAL SOLUTION : HUM PHELE DO VARIABLES LENGE largest and secondLargest     
-int largest = Integer.MIN_VALUE;
+int largest = arr[0];
 int secondLargest = Integer.MIN_VALUE;    
 for(int i=0; i<arr.length; i++){
     if(arr[i] > largest){
