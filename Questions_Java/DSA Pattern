@@ -1,0 +1,380 @@
+# Two Pointers Pattern
+
+## When to Think of Two Pointers?
+
+### Arrays
+- Sorted array
+- Pair sum
+- Triplet sum
+- Quadruplet sum
+- Remove duplicates
+- Remove elements
+- Merge sorted arrays
+- Target sum problems
+
+### Linked Lists
+- Detect cycle
+- Find middle node
+- Find kth node from end
+- Palindrome linked list
+
+---
+
+# Recognition Keywords
+
+If the question contains:
+
+✅ Sorted Array  
+✅ Pair Sum  
+✅ Triplet Sum  
+✅ Quadruplet Sum  
+✅ Remove Duplicates  
+✅ Merge Sorted Arrays  
+✅ Detect Cycle  
+✅ Middle Node  
+✅ Palindrome Linked List
+
+→ Think **Two Pointers**
+
+---
+
+# Types of Two Pointers
+
+## 1. Opposite Direction Pointers
+
+```java
+int left = 0;
+int right = n - 1;
+```
+
+Used in:
+- Pair Sum
+- Triplet Sum
+- Quadruplet Sum
+- Sorted Arrays
+
+---
+
+## 2. Same Direction Pointers
+
+```java
+int slow = 0;
+int fast = 0;
+```
+
+Used in:
+- Remove Duplicates
+- Remove Elements
+- Partition Array
+
+---
+
+## 3. Fast & Slow Pointers
+
+```java
+ListNode slow = head;
+ListNode fast = head;
+```
+
+Used in:
+- Detect Cycle
+- Find Middle Node
+- Palindrome Linked List
+
+---
+
+# Pattern 1: Pair Sum
+
+### Condition
+- Sorted Array
+- Find two numbers whose sum = target
+
+```java
+while(left < right) {
+
+    int sum = arr[left] + arr[right];
+
+    if(sum == target)
+        return true;
+
+    else if(sum < target)
+        left++;
+
+    else
+        right--;
+}
+```
+
+### Complexity
+
+```text
+Time  : O(n)
+Space : O(1)
+```
+
+---
+
+# Pattern 2: Triplet Sum
+
+### Condition
+- Sorted Array
+- Find three numbers
+
+```java
+for(int i = 0; i < n; i++) {
+
+    int left = i + 1;
+    int right = n - 1;
+
+    while(left < right) {
+
+        // logic
+    }
+}
+```
+
+### Complexity
+
+```text
+Time  : O(n²)
+Space : O(1)
+```
+
+---
+
+# Pattern 3: Quadruplet Sum
+
+### Condition
+- Sorted Array
+- Find four numbers
+
+```java
+for(int i = 0; i < n; i++) {
+
+    for(int j = i + 1; j < n; j++) {
+
+        int left = j + 1;
+        int right = n - 1;
+
+        while(left < right) {
+
+            // logic
+        }
+    }
+}
+```
+
+### Complexity
+
+```text
+Time  : O(n³)
+Space : O(1)
+```
+
+---
+
+# Pattern 4: Remove Duplicates
+
+### Condition
+- Sorted Array
+
+```java
+int slow = 0;
+
+for(int fast = 1; fast < n; fast++) {
+
+    if(arr[fast] != arr[slow]) {
+
+        slow++;
+        arr[slow] = arr[fast];
+    }
+}
+```
+
+### Complexity
+
+```text
+Time  : O(n)
+Space : O(1)
+```
+
+---
+
+# Pattern 5: Remove Specific Element
+
+```java
+int slow = 0;
+
+for(int fast = 0; fast < n; fast++) {
+
+    if(arr[fast] != key) {
+
+        arr[slow] = arr[fast];
+        slow++;
+    }
+}
+```
+
+### Complexity
+
+```text
+Time  : O(n)
+Space : O(1)
+```
+
+---
+
+# Pattern 6: Merge Sorted Arrays
+
+### Condition
+- Two Sorted Arrays
+
+```java
+int i = 0;
+int j = 0;
+
+while(i < n1 && j < n2) {
+
+    if(a[i] <= b[j]) {
+        i++;
+    } else {
+        j++;
+    }
+}
+```
+
+### Complexity
+
+```text
+Time  : O(n + m)
+Space : O(1)
+```
+
+---
+
+# Pattern 7: Detect Cycle in Linked List
+
+### Floyd Cycle Detection
+
+```java
+ListNode slow = head;
+ListNode fast = head;
+
+while(fast != null && fast.next != null) {
+
+    slow = slow.next;
+    fast = fast.next.next;
+
+    if(slow == fast)
+        return true;
+}
+```
+
+### Complexity
+
+```text
+Time  : O(n)
+Space : O(1)
+```
+
+---
+
+# Pattern 8: Find Middle Node
+
+```java
+ListNode slow = head;
+ListNode fast = head;
+
+while(fast != null && fast.next != null) {
+
+    slow = slow.next;
+    fast = fast.next.next;
+}
+
+return slow;
+```
+
+### Complexity
+
+```text
+Time  : O(n)
+Space : O(1)
+```
+
+---
+
+# Pattern 9: Palindrome Linked List
+
+### Steps
+
+```text
+1. Find middle node
+2. Reverse second half
+3. Compare both halves
+```
+
+Uses:
+
+```java
+slow
+fast
+```
+
+### Complexity
+
+```text
+Time  : O(n)
+Space : O(1)
+```
+
+---
+
+# Cheat Sheet
+
+| Clue | Pattern |
+|--------|----------|
+| Sorted Array | Opposite Pointers |
+| Pair Sum | Opposite Pointers |
+| Triplet Sum | Opposite Pointers |
+| Quadruplet Sum | Opposite Pointers |
+| Remove Duplicates | Slow & Fast |
+| Remove Element | Slow & Fast |
+| Merge Sorted Arrays | Two Array Pointers |
+| Detect Cycle | Fast & Slow |
+| Middle Node | Fast & Slow |
+| Palindrome Linked List | Fast & Slow |
+
+---
+
+# Interview Shortcut
+
+```text
+Sorted Array?
+    → Pair / Triplet / Quadruplet
+    → Opposite Pointers
+
+Remove Duplicates?
+    → Slow & Fast
+
+Merge Sorted Arrays?
+    → Two Array Pointers
+
+Linked List?
+    → Fast & Slow
+
+Cycle?
+    → Floyd Algorithm
+```
+
+# Golden Rule
+
+If the problem involves:
+
+- Sorted data
+- Pair / Triplet / Quadruplet
+- Removing duplicates
+- Merging sorted arrays
+- Linked list cycle detection
+- Finding middle node
+
+→ Try **Two Pointers** before using HashMap or extra space.
